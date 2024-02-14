@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    background-color: #ffe0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    margin: 0;
+}
+
+.outter {
+    text-align: center;
+    padding-top: 250px;
+}
+
+.hehe, a {
+    text-decoration: none;
+    font-style: italic;
+}
+
+#destinyButton {
+    background-color: #ff6961;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+#destinyButton:hover {
+    background-color: #f04545;
+}

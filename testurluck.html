@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Velentines Fun</title>
+</head>
+<body>
+    <div class="outter">
+        <h1 class="big-title">💞Your Valentine will be...💖</h1>
+        <button type="button" id="destinyButton" onclick="outPutLuck()">Hmm...</button>
+
+        <p class="hehe">Hi single ako fb ko <a href="https://www.facebook.com/hachikisen" target="_blank">here 😓</a></p>
+    </div>
+
+    <script>
+        const outcomes = [
+            { destiny: "💐 You'll receive a bouquet of roses", chance: 15 / 100 }, // 15% chance
+            { destiny: "🕯️ You'll have a romantic candlelit dinner with your loved one", chance: 20 / 100 }, // 20% chance
+            { destiny: "💌 You'll receive a heartfelt love letter", chance: 10 / 100 }, // 10% chance
+            { destiny: "🎥 You'll watch a romantic movie together", chance: 25 / 100 }, // 25% chance
+            { destiny: "🎁 You'll exchange meaningful gifts", chance: 18 / 100 }, // 18% chance
+            { destiny: "🏖️ You'll have a surprise romantic getaway", chance: 8 / 100 }, // 8% chance
+            { destiny: "🍽️ You'll enjoy a homemade candlelit dinner together", chance: 12 / 100 }, // 12% chance
+            { destiny: "🍫 You'll receive a box of chocolates", chance: 10 / 100 }, // 10% chance
+            { destiny: "💋 You'll have a passionate kiss under the stars", chance: 7 / 100 }, // 7% chance
+            { destiny: "🧸 You'll spend quality time cuddling together", chance: 15 / 100 }, // 15% chance
+            { destiny: "🎨 You'll create handmade gifts together", chance: 5 / 100 }, // 5% chance
+            { destiny: "✍️ You'll write love poems to each other", chance: 6 / 100 }, // 6% chance
+            { destiny: "👩‍🍳 You'll cook a romantic dinner together", chance: 13 / 100 }, // 13% chance
+            { destiny: "🌅 You'll go on a spontaneous adventure", chance: 9 / 100 }, // 9% chance
+            { destiny: "🔥 You'll have a cozy night by the fireplace", chance: 11 / 100 }, // 11% chance
+            { destiny: "💃 You'll have a romantic dance together", chance: 14 / 100 }, // 14% chance
+            { destiny: "🌹 You'll receive a single red rose", chance: 3 / 100 }, // 3% chance
+            { destiny: "🍾 You'll celebrate with champagne and strawberries", chance: 8 / 100 }, // 8% chance
+            { destiny: "💑 You'll recreate your first date", chance: 6 / 100 }, // 6% chance
+            { destiny: "🏞️ You'll go for a scenic hike together", chance: 10 / 100 }, // 10% chance
+            { destiny: "😂 You'll discover that your secret admirer is your pet hamster", chance: 4 / 100 }, // 4% chance
+            { destiny: "🤦‍♂️ You'll trip over your own feet and land in a rom-com style embrace", chance: 6 / 100 }, // 6% chance
+            { destiny: "🍬 You'll receive a giant box of candy... heartburn included", chance: 9 / 100 }, // 9% chance
+            { destiny: "🎤 You'll sing a karaoke duet so off-key that the dogs howl along", chance: 12 / 100 }, // 12% chance
+            { destiny: "👯‍♂️ You'll accidentally wear matching outfits", chance: 10 / 100 }, // 10% chance
+            { destiny: "❤️ You'll discover matching heart-shaped birthmarks in unexpected places", chance: 3 / 100}, // 3% chance
+            { destiny: "🍕 You'll order pizza by candlelight when everything else fails", chance: 15 / 100}, // 15% chance
+            { destiny: "🎬 You'll binge-watch cheesy romance movies and judge the outfits", chance: 18 / 100}, // 18% chance
+            { destiny: "💃 You'll have a dance party for two (even if you have two left feet)", chance: 13 / 100}, //13% chance
+            { destiny: "🐿️ You'll find a new appreciation for love after watching squirrels hoard Valentine candy", chance: 5 / 100 } // 5% chance
+        ]
+
+        function outPutLuck() {
+            let random = Math.random();
+
+            for (let outcome of outcomes) {
+                random -= outcome.chance;
+                if (random <= 0) {
+                    const button = document.getElementById('destinyButton');
+                    button.textContent = outcome.destiny;
+                    return
+                }
+            }
+        }
+
+        // console.log(outPutLuck())
+    </script>
+</body>
+</html>
